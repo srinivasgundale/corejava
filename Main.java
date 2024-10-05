@@ -10,5 +10,8 @@ public class Main {
         Dog dog = new Dog();
         dog.sound();
         dog.bite();
+
+        DogBehaviour behaviour = new DogBehaviour();
+        behaviour.sound();
     }
 }
