@@ -1,7 +1,13 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
+//file write
 import java.io.FileWriter;
+import java.io.IOException;
+
+//file read
+import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
@@ -37,6 +43,18 @@ public class Main {
             FileWriter writer = new FileWriter("output.txt");
             writer.write("Hello, Java! in output.txt file");
             writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            FileReader file = new FileReader("output.txt");
+            BufferedReader reader = new BufferedReader(file);
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
