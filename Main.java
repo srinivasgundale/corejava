@@ -59,5 +59,9 @@ public class Main {
             e.printStackTrace();
         }
 
+
+        MyThread thread = new MyThread();
+        thread.start();
+
     }
 }
